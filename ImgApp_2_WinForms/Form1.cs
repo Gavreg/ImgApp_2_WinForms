@@ -25,7 +25,7 @@ namespace ImgApp_2_WinForms
 
         private void bOpen_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog  = new OpenFileDialog();
+            using OpenFileDialog openFileDialog  = new OpenFileDialog();
             openFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
             openFileDialog.Filter = "Картинки (png, jpg, bmp, gif) |*.png;*.jpg;*.bmp;*.gif|All files (*.*)|*.*";
             openFileDialog.RestoreDirectory = true;
@@ -44,7 +44,7 @@ namespace ImgApp_2_WinForms
 
         private void bSave_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileFialog = new SaveFileDialog();
+            using SaveFileDialog saveFileFialog = new SaveFileDialog();
             saveFileFialog.InitialDirectory = Directory.GetCurrentDirectory();
             saveFileFialog.Filter = "Картинки (png, jpg, bmp, gif) |*.png;*.jpg;*.bmp;*.gif|All files (*.*)|*.*";
             saveFileFialog.RestoreDirectory = true;
